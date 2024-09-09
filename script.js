@@ -72,7 +72,7 @@ function handleInput() {
   } else if (currentScene === 'scene1') {
     if (userInputValue === '1') {
       currentScene = 'scene2'; // Move to Scene 2 if user selects '1'
-      typeText("\nWell done! You've successfully completed the challenge.\n\n> You are now standing in front of this mysterious website, with three distinct paths ahead. Are you excited? (Type 'yes')");
+      typeText("\nWell done!\n\n> You are now standing in front of this mysterious website, with three distinct paths ahead. Are you excited? (Type 'yes')");
     } else if (userInputValue === '2') {
       denyAccess(currentChallenge.wrongChoiceText); // Show specific wrong choice text
     } else {
