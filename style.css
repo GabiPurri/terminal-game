@@ -1,9 +1,14 @@
 /*This version is optimized for Webflow.
 
+
 /* Apply box-sizing globally to ensure consistent sizing */
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+body {
+  background-color: black;
+ }
 
 /* Style the game container with a fixed width */
 .game-container {
@@ -33,6 +38,15 @@
   background-color: black;
   color: limegreen;
   box-sizing: border-box !important;  /* Include padding in width calculations */
+ 
+  /* Subtle, continuous flicker and shadow */
+  text-shadow: 1px 0px 2px limegreen, -1px 0px 2px darkgreen;
+  position: relative;
+  opacity: 1;
+  
+  /* Persistent scanlines */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 2px, transparent 2px);
+  background-size: 100% 3px; /* Horizontal scanlines for old terminal look */
 }
 
 /* Style the input field */
@@ -74,3 +88,10 @@ button:hover {
   width: 100% !important;   /* Full width of the container */
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ensure canvas does not block other elements */
+  opacity: 0.05;        /* Lower opacity for more subtle noise */
+}
