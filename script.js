@@ -80,10 +80,10 @@ function handleInput() {
     }
   } else if (currentScene === 'scene2') {
     if (userInputValue === 'yes') {
-      currentScene = 'scene3'; // Move to Scene 3 if 'investigate' is typed
+      currentScene = 'scene3'; // Move to Scene 3 if 'yes' is typed
       typeText("Now, listen.\n\n> To the north, a page beckons with the promise of knowledge and quirky facts about Gabi. (Type 'about')\n\n> To the east, a showcase of her past and current work is revealed. (Type 'work')\n\n> To the west, a fine collection of side projects, hobbies, and experiments. (Type 'play')");
     } else {
-      typeText("\nInvalid response. Try again.\n> Type 'investigate' to proceed.");
+      typeText("\nInvalid response. Try again.\n> Type 'yes' to proceed.");
     }
   } else if (currentScene === 'scene3') {
     if (userInputValue === 'about') {
