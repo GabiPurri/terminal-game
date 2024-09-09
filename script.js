@@ -8,6 +8,7 @@ const restartButton = document.getElementById('restart-button');
 let currentScene = 'loading';  // Start with loading
 let userInputValue = '';       // Variable to store user input
 let gameContent = {};          // Variable to store game content
+let currentChallenge = null;   // Variable to store the current challenge
 
 // Fetch game content from JSON file
 fetch('gameContent.json')
@@ -73,7 +74,7 @@ function handleInput() {
       currentScene = 'scene2'; // Move to Scene 2 if user selects '1'
       typeText("\nWell done! You've successfully completed the challenge.\n\n> You are now standing in front of this mysterious website, with three distinct paths ahead. (Type 'investigate')");
     } else if (userInputValue === '2') {
-      denyAccess("\nYou accidentally set fire to the space garden. What a mess.\nAccess denied.");
+      denyAccess(currentChallenge.wrongChoiceText); // Show specific wrong choice text
     } else {
       typeText("\nInvalid response. Try again.\n> Please choose an option (Type '1' or '2')");
     }
@@ -111,8 +112,8 @@ function showRestartButton() {
 
 // Pick a random challenge for Scene 1
 function pickRandomChallenge() {
-  const randomChallenge = gameContent.challenges[Math.floor(Math.random() * gameContent.challenges.length)];
-  typeText(`${randomChallenge.description}\n\nWhat do you do?\n    ${randomChallenge.options[0]}\n    ${randomChallenge.options[1]}`);
+  currentChallenge = gameContent.challenges[Math.floor(Math.random() * gameContent.challenges.length)];
+  typeText(`${currentChallenge.description}\n\nWhat do you do?\n    ${currentChallenge.options[0]}\n    ${currentChallenge.options[1]}`);
 }
 
 // Event listeners for input submission
