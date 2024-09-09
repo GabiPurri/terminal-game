@@ -1,77 +1,75 @@
-/* Style the body */
-body {
-  margin: 0;
-  padding: 0;
+/*This version is optimized for Webflow.
+
+/* Apply box-sizing globally to ensure consistent sizing */
+*, *::before, *::after {
   box-sizing: border-box;
-  background-color: black; /* Terminal background */
-  color: limegreen; /* Terminal green text */
-  font-family: 'Inconsolata', monospace;
-  font-size: 1rem;
 }
 
-/* Style the container */
+/* Style the game container with a fixed width */
 .game-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 24px;
-    background-color: black; /* Terminal background */
-    color: limegreen; /* Terminal green text */
-    font-family: 'Inconsolata', monospace;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  
-/* Text output area - Prevent resizing */
+  width: 700px !important;   /* Fixed width */
+  padding: 24px !important;   /* Ensure padding doesn't affect width */
+  background-color: black;
+  color: limegreen;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto !important;  /* Center the container */
+  box-sizing: border-box !important;  /* Ensure padding is included in width calculation */
+}
+
+/* Fixed-size text output area */
 #game-text {
-  white-space: pre-wrap;      /* Preserve text formatting but wrap long lines */
-  word-wrap: break-word;      /* Wrap long words to avoid overflow */
-  height: 400px;              /* Fixed height for the game text area */
-  overflow-y: auto;           /* Scroll vertically if content overflows */
+  white-space: pre-wrap !important;   /* Preserve text formatting but allow wrapping */
+  word-wrap: break-word !important;   /* Break long words to prevent overflow */
+  height: 400px !important;           /* Fixed height */
+  width: 100% !important;             /* Make the text area take the full width of the container */
+  max-width: 700px !important;        /* Ensure the text area doesn't exceed the container's width */
+  overflow-y: auto !important;        /* Scroll vertically if content overflows */
   padding: 10px;
   border: 1px solid limegreen;
   margin-bottom: 10px;
   background-color: black;
   color: limegreen;
-  width: 100%;
+  box-sizing: border-box !important;  /* Include padding in width calculations */
 }
-  
-  /* Input field */
-  #user-input {
-    width: 50%;
-    padding: 10px;
-    background-color: black;
-    color: limegreen;
-    border: 1px solid limegreen;
-    font-family: 'Inconsolata', monospace;
-    font-size: 1rem;
-  }
-  
-  /* Buttons */
-  button {
-    background-color: limegreen;
-    color: black;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Inconsolata', monospace;
-    font-size: 1rem;
-    margin-top: 10px;
-    width: 100px;
-  }
-  
-  button:hover {
-    background-color: darkgreen;
-  }
-  
 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 10px; /* Optional: Adds space between buttons */
+/* Style the input field */
+#user-input {
+  width: 100% !important;             /* Full width of the container */
+  max-width: 700px !important;        /* Match the container's width */
+  padding: 10px;
+  background-color: black;
+  color: limegreen;
+  border: 1px solid limegreen;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  box-sizing: border-box !important;  /* Include padding in width calculations */
 }
+
+/* Style the buttons */
+button {
+  background-color: limegreen;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+/* Ensure the button container maintains a stable layout */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: left;  /* Align buttons to the left */
+  width: 100% !important;   /* Full width of the container */
+}
+
