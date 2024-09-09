@@ -87,11 +87,3 @@ button:hover {
   justify-content: left;  /* Align buttons to the left */
   width: 100% !important;   /* Full width of the container */
 }
-
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none; /* Ensure canvas does not block other elements */
-  opacity: 0.05;        /* Lower opacity for more subtle noise */
-}
