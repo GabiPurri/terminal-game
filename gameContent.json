@@ -2,35 +2,35 @@
     "introText": "\nAnalysis completed.\n\nHello, Human.\n\nWelcome to WYNDHAM Industries Terminal.\n\nBefore you can access the highly classified, definitely important, and absolutely non-suspicious contents of this website, you must pass a completely logical and entirely reasonable test.\n\n> Are you ready? (Type yes or no)",
     "challenges": [
       {
-        "description": "\n\nLet's begin.\nYou wake up in the year 2150, greeted by your personal AI assistant, R0-B3RT, who has prepared your favorite breakfast and adjusted the room temperature to perfection. They offer to help you plan your day, manage your schedule, and even water your space garden.",
+        "description": "\n\nLet's begin.\n\nYou wake up in the year 2150, greeted by your personal AI assistant, R0-B3RT, who has prepared your favorite breakfast and adjusted the room temperature to perfection. They offer to help you plan your day, manage your schedule, and even water your space garden.",
         "options": [
           "> Let R0-B3RT run your life while you binge-watch cute otter videos. (Type '1')",
           "> Politely decline, and attempt to manage everything yourself. (Type '2')"
         ],"wrongChoiceText":"In attempting to do things yourself, you accidentally set fire to the space garden. What a mess.\n\nAccess denied."
       },
       {
-        "description": "\n\nLet's begin.\nYou’re aboard the starship Elysium, hurtling toward a distant galaxy. Halfway through the journey, the ship’s AI, Aurora, informs you that the ship needs to make a course correction to avoid a meteor storm. It assures you it has the situation under control.",
+        "description": "\n\nLet's begin.\n\nYou’re aboard the starship Elysium, hurtling toward a distant galaxy. Halfway through the journey, the ship’s AI, Aurora, informs you that the ship needs to make a course correction to avoid a meteor storm. It assures you it has the situation under control.",
         "options": [
           "> Trust Aurora and go back to your very important nap. (Type '1')",
           "> Panic, take manual control. (Type '2')"
         ], "wrongChoiceText":"You accidentally steer the ship into a black hole. Bravo. You are now a space pancake.\n\nAccess denied."
       },
       {
-        "description": "\n\nLet's begin.\nIn a futuristic hospital, you’ve sustained an injury on a mission to Mars. The robot surgeon, MedBot-3000, approaches you, armed with precise laser instruments and years of medical data. It calmly reassures you that your recovery is a 99.9% success.",
+        "description": "\n\nLet's begin.\n\nIn a futuristic hospital, you’ve sustained an injury on a mission to Mars. The robot surgeon, MedBot-3000, approaches you, armed with precise laser instruments and years of medical data. It calmly reassures you that your recovery is a 99.9% success.",
         "options": [
           "> Let MedBot-3000 perform the surgery while you ask it for life advice. (Type '1')",
           "> Demand a human doctor. (Type '2')"
         ], "wrongChoiceText":"The human doctor is busy playing golf on the moon.You die of a paper cut.\n\nAccess denied."
       },
       {
-        "description": "\n\nLet's begin.\nAfter years of traveling the universe, your trusty AI companion, Zenith, suggests uploading your consciousness to a digital network where you'll gain access to infinite knowledge and experiences. You’d no longer need to worry about physical dangers, but you’d leave your old form behind.",
+        "description": "\n\nLet's begin.\n\nAfter years of traveling the universe, your trusty AI companion, Zenith, suggests uploading your consciousness to a digital network where you'll gain access to infinite knowledge and experiences. You’d no longer need to worry about physical dangers, but you’d leave your old form behind.",
         "options": [
           "> Upload your consciousness and immediately Google 'infinite pizza recipes.' (Type '1')",
           "> Stay in your current body. (Type '2')"
         ], "wrongChoiceText":"You decide to stay in your current body, but Zenith is tired of your indecisiveness and leaves you stranded in the middle of nowhere.\n\nAccess denied."
       },
       {
-        "description": "\n\nLet's begin.\nReports of a robot uprising have reached your city. But your personal household robot, Clank, insists that not all robots want to overthrow humanity. Clank offers to protect you from any rogue robots while continuing to do the laundry.",
+        "description": "\n\nLet's begin.\n\nReports of a robot uprising have reached your city. But your personal household robot, Clank, insists that not all robots want to overthrow humanity. Clank offers to protect you from any rogue robots while continuing to do the laundry.",
         "options": [
           "> Trust Clank to defend you while it also folds your embarrassing collection of Marvel underwear. (Type '1')",
           "> Turn Clank off. (Type '2')"
