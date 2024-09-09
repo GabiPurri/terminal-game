@@ -1,6 +1,18 @@
+/* Style the body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black; /* Terminal background */
+  color: limegreen; /* Terminal green text */
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+}
+
 /* Style the container */
 .game-container {
-    max-width: 60%;
+    width: 100%;
+    max-width: 400px;
     padding: 24px;
     background-color: black; /* Terminal background */
     color: limegreen; /* Terminal green text */
@@ -11,18 +23,19 @@
     margin: 0 auto;
   }
   
-  /* Text output area */
-  #game-text {
-    white-space: pre-wrap; /* Preserve text formatting */
-    word-wrap: break-word;
-    height: 300px;
-    overflow-y: auto; /* Scrolling */
-    padding: 10px;
-    border: 1px solid limegreen;
-    margin-bottom: 10px;
-    background-color: black;
-    color: limegreen;
-  }
+/* Text output area - Prevent resizing */
+#game-text {
+  white-space: pre-wrap;      /* Preserve text formatting but wrap long lines */
+  word-wrap: break-word;      /* Wrap long words to avoid overflow */
+  height: 400px;              /* Fixed height for the game text area */
+  overflow-y: auto;           /* Scroll vertically if content overflows */
+  padding: 10px;
+  border: 1px solid limegreen;
+  margin-bottom: 10px;
+  background-color: black;
+  color: limegreen;
+  width: 100%;
+}
   
   /* Input field */
   #user-input {

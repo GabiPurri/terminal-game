@@ -81,7 +81,7 @@ function handleInput() {
   } else if (currentScene === 'scene2') {
     if (userInputValue === 'investigate') {
       currentScene = 'scene3'; // Move to Scene 3 if 'investigate' is typed
-      typeText("\nTo the north, a page beckons with the promise of knowledge and quirky facts about Gabi. (Type 'about')\n\nTo the east, a showcase of her past and current work is revealed. (Type 'work')\n\nTo the west, a fine collection of side projects, hobbies, and experiments. (Type 'play')");
+      typeText("\n> To the north, a page beckons with the promise of knowledge and quirky facts about Gabi. (Type 'about')\n\n> To the east, a showcase of her past and current work is revealed. (Type 'work')\n\n> To the west, a fine collection of side projects, hobbies, and experiments. (Type 'play')");
     } else {
       typeText("\nInvalid response. Try again.\n> Type 'investigate' to proceed.");
     }
