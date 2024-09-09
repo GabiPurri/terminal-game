@@ -1,0 +1,59 @@
+/* Style the container */
+.game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: black; /* Terminal background */
+    color: limegreen; /* Terminal green text */
+    font-family: "Inconsolata";
+    border: 2px solid limegreen; /* Green border */
+  }
+  
+  /* Text output area */
+  #game-text {
+    white-space: pre-wrap; /* Preserve text formatting */
+    word-wrap: break-word;
+    height: 300px;
+    overflow-y: auto; /* Scrolling */
+    padding: 10px;
+    border: 1px solid limegreen;
+    margin-bottom: 10px;
+    background-color: black;
+    color: limegreen;
+  }
+  
+  /* Input field */
+  #user-input {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: limegreen;
+    border: 1px solid limegreen;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: limegreen;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: darkgreen;
+  }
+  
+  #restart-button {
+    display: inline-block;  }
+  
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
