@@ -1,13 +1,14 @@
 /* Style the container */
 .game-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+    max-width: 60%;
+    padding: 24px;
     background-color: black; /* Terminal background */
     color: limegreen; /* Terminal green text */
     font-family: 'Inconsolata', monospace;
     font-size: 1rem;
-    border: 2px solid limegreen; /* Green border */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
   
   /* Text output area */
@@ -25,12 +26,13 @@
   
   /* Input field */
   #user-input {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background-color: black;
     color: limegreen;
     border: 1px solid limegreen;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
   }
   
   /* Buttons */
@@ -43,15 +45,12 @@
     font-family: 'Inconsolata', monospace;
     font-size: 1rem;
     margin-top: 10px;
-    display: inline-block;
+    width: 100px;
   }
   
   button:hover {
     background-color: darkgreen;
   }
-  
-  #restart-button {
-    display: inline-block;  }
   
 
   @keyframes spin {
@@ -59,3 +58,7 @@
     100% { transform: rotate(360deg); }
   }
   
+  .button-container {
+    display: flex;
+    gap: 10px; /* Optional: Adds space between buttons */
+}
