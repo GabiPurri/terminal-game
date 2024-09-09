@@ -5,7 +5,8 @@
     padding: 20px;
     background-color: black; /* Terminal background */
     color: limegreen; /* Terminal green text */
-    font-family: "Inconsolata";
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
     border: 2px solid limegreen; /* Green border */
   }
   
@@ -39,7 +40,8 @@
     padding: 10px;
     border: none;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1rem;
     margin-top: 10px;
     display: inline-block;
   }
