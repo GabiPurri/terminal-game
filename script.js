@@ -9,6 +9,10 @@ let currentScene = 'loading';  // Start with loading
 let userInputValue = '';       // Variable to store user input
 let gameContent = {};          // Variable to store game content
 let currentChallenge = null;   // Variable to store the current challenge
+let isTyping = false;  // Variable to track if text is still typing
+
+disableInput();  // Disable input when the page loads
+
 
 // Fetch game content from JSON Github file
 fetch('https://raw.githubusercontent.com/GabiPurri/terminal-game/master/gameContent.json')
@@ -19,21 +23,26 @@ fetch('https://raw.githubusercontent.com/GabiPurri/terminal-game/master/gameCont
   })
   .catch(error => console.error('Error loading game content:', error));
 
-// Show typing animation for text
-function typeText(text, callback) {
-  let i = 0;
-  gameText.textContent = ''; // Clear previous text before typing new text
-  const typingInterval = setInterval(() => {
-    if (i < text.length) {
-      gameText.textContent += text.charAt(i);
-      gameText.scrollTop = gameText.scrollHeight; // Scroll to the bottom
-      i++;
-    } else {
-      clearInterval(typingInterval);
-      if (callback) callback(); // Execute the next function after typing
-    }
-  }, 30); // Adjust typing speed here
+  function typeText(text, callback) {
+    isTyping = true;  // Mark as typing
+    disableInput();    // Disable input while typing
+
+    let i = 0;
+    gameText.textContent = ''; // Clear previous text before typing new text
+    const typingInterval = setInterval(() => {
+        if (i < text.length) {
+            gameText.textContent += text.charAt(i);
+            gameText.scrollTop = gameText.scrollHeight; // Scroll to the bottom
+            i++;
+        } else {
+            clearInterval(typingInterval);
+            isTyping = false;  // Typing is complete
+            enableInput();     // Enable input when typing is done
+            if (callback) callback(); // Execute the next function after typing
+        }
+    }, 30); // Adjust typing speed here
 }
+
 
 // Show blinking text (Assessing connected entity...)
 function blinkText(times, callback) {
@@ -56,6 +65,8 @@ function blinkText(times, callback) {
 
 // Handle user input and game logic
 function handleInput() {
+  if (isTyping) return; // Prevent handling input while typing
+
   userInputValue = userInput.value.trim().toLowerCase(); // Store and normalize input
   userInput.value = '';  // Clear input field after reading the input
 
@@ -140,4 +151,17 @@ function startGame() {
       currentScene = 'intro'; // Set the initial scene to 'intro' after the boot-up sequence
     });
   });
+}
+
+function disableInput() {
+  userInput.disabled = true;   // Disable the input field
+  submitButton.disabled = true;  // Disable the submit button
+  userInput.placeholder = "Please wait...";  // Update placeholder text
+}
+
+function enableInput() {
+  userInput.disabled = false;  // Enable the input field
+  submitButton.disabled = false; // Enable the submit button
+  userInput.placeholder = "Type here...";  // Restore placeholder text
+  userInput.focus();           // Automatically focus the input field
 }
