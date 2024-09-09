@@ -72,16 +72,16 @@ function handleInput() {
   } else if (currentScene === 'scene1') {
     if (userInputValue === '1') {
       currentScene = 'scene2'; // Move to Scene 2 if user selects '1'
-      typeText("\nWell done! You've successfully completed the challenge.\n\n> You are now standing in front of this mysterious website, with three distinct paths ahead. (Type 'investigate')");
+      typeText("\nWell done! You've successfully completed the challenge.\n\n> You are now standing in front of this mysterious website, with three distinct paths ahead. Are you excited? (Type 'yes')");
     } else if (userInputValue === '2') {
       denyAccess(currentChallenge.wrongChoiceText); // Show specific wrong choice text
     } else {
       typeText("\nInvalid response. Try again.\n> Please choose an option (Type '1' or '2')");
     }
   } else if (currentScene === 'scene2') {
-    if (userInputValue === 'investigate') {
+    if (userInputValue === 'yes') {
       currentScene = 'scene3'; // Move to Scene 3 if 'investigate' is typed
-      typeText("\n> To the north, a page beckons with the promise of knowledge and quirky facts about Gabi. (Type 'about')\n\n> To the east, a showcase of her past and current work is revealed. (Type 'work')\n\n> To the west, a fine collection of side projects, hobbies, and experiments. (Type 'play')");
+      typeText("Now, listen.\n\n> To the north, a page beckons with the promise of knowledge and quirky facts about Gabi. (Type 'about')\n\n> To the east, a showcase of her past and current work is revealed. (Type 'work')\n\n> To the west, a fine collection of side projects, hobbies, and experiments. (Type 'play')");
     } else {
       typeText("\nInvalid response. Try again.\n> Type 'investigate' to proceed.");
     }
