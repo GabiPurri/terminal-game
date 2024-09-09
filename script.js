@@ -10,8 +10,8 @@ let userInputValue = '';       // Variable to store user input
 let gameContent = {};          // Variable to store game content
 let currentChallenge = null;   // Variable to store the current challenge
 
-// Fetch game content from JSON file
-fetch('gameContent.json')
+// Fetch game content from JSON Github file
+fetch('https://raw.githubusercontent.com/GabiPurri/terminal-game/master/gameContent.json')
   .then(response => response.json())
   .then(data => {
     gameContent = data;
